@@ -18,7 +18,7 @@ public class Main {
 			out.writeObject(airport1);
 			out.close();
 			fileOut.close();
-			System.out.printf("Serialized data is saved in data.txt");
+			System.out.printf("Data is saved.\n");
 		}
 		catch (IOException i){
 			i.printStackTrace();
@@ -37,11 +37,12 @@ public class Main {
 	         i.printStackTrace();
 	         return;
 	      } catch (ClassNotFoundException c) {
-	         System.out.println("Data not found");
+	         System.out.println("Data not found.\n");
 	         c.printStackTrace();
 	         return;
 	      }
 		
+		//airport2.getHangar("H1").displayInfo();
 		airport2.listHangars();
 		airport2.listRunways();
 	}
